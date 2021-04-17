@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
@@ -41,6 +42,7 @@ class PostsControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "USER")
     @DisplayName("Posts 가 등록된다.")
     void savePosts() throws Exception {
         //given
@@ -69,6 +71,7 @@ class PostsControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "USER")
     @DisplayName("Posts 가 수정된다.")
     void updatePosts() throws Exception {
         //given
