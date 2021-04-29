@@ -6,15 +6,15 @@ branches:
   only:
     - master
 
+before_install:
+  - "chmod +x ./gradlew"
+  - "chmod +x gradle/wrapper/gradle-wrapper.jar"
+
 # Travis CI 서버의 Home
 cache:
   directories:
     - '$HOME/.m2/repository/'
     - '$HOME/.gradle'
-
-before_script:
-  - "chmod +x ./gradlew"
-  - "chmod +x gradle/wrapper/gradle-wrapper.jar"
 
 script: "./gradlew clean build"
 
