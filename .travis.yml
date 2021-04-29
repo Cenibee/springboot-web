@@ -41,11 +41,10 @@ deploy:
 
     bucket: springboot-web
     key: springboot-web.zip
-
     bundle_type: zip
-    application: springboot-web
 
-    deployment_group: springboot-web-group
+    application: deploy-app
+    deployment_group: deploy-app-group
 
     region: ap-northeast-2
     wait-until-deploy: true
