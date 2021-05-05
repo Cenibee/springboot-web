@@ -60,7 +60,7 @@ jobs:
       run: aws s3 cp --region ap-northeast-2 ./deploy/container-restaurant.zip s3://container-restaurant/container-restaurant.zip
       
     - name: Code Deploy
-      run: aws deploy create-deployment --aplication-name container-restaurant --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name container-restaurant --s3-location bucket=container-restaurant,bundleType=zip,key=container-restaurant.zip
+      run: aws deploy create-deployment --application-name container-restaurant --deployment-config-name CodeDeployDefault.OneAtATime --deployment-group-name container-restaurant --s3-location bucket=container-restaurant,bundleType=zip,key=container-restaurant.zip
 
 
 
