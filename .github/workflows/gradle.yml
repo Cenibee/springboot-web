@@ -39,6 +39,9 @@ jobs:
     - name: Copy script files
       run: cp scripts/*.sh for-deploy/
       
+    - name: Copy appspec script file
+      run: cp appspec.yml for-deploy/
+      
     - name: Make deploy directory
       run: mkdir -p deploy
       
